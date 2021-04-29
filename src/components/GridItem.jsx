@@ -1,9 +1,13 @@
 import React from 'react'
 
-const GridItem = () => {
+const GridItem = ({title, poster, year}) => {
+  console.log(title)
   return (
     <div>
-      <p>Grid item</p>
+      <p>{title}</p>
+      <img src={poster} alt={title}/>
+      <p>{year}</p>
+      <hr />
     </div>
   )
 }

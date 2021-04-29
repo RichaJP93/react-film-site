@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import Carousel from './components/Carousel';
-import Grid from './components/Grid';
+import MovieList from './components/MovieList';
 import Header from './components/Header';
-// import API_KEY from './config/config.env';
+import './App.css';
 
 
 const App = () => {
@@ -20,14 +20,14 @@ const App = () => {
   console.log(movies)
   return (
     <div className="App">
-      <div className="navbar-container">
+      <div className="header-container">
         <Header />
       </div>
       <div className="carousel-container" >
         <Carousel />
       </div>
       <div className="film-grid-container" >
-        <Grid title='Star Wars' movies={movies}/>
+        <MovieList title='Star Wars' movies={movies}/>
       </div>
       {/* <div className="film-grid-container" >
         <Grid />

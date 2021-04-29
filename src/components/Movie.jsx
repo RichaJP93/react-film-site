@@ -1,7 +1,6 @@
 import React from 'react'
 
-const GridItem = ({title, poster, year}) => {
-  console.log(title)
+const Movie = ({title, poster, year}) => {
   return (
     <div>
       <p>{title}</p>
@@ -12,4 +11,4 @@ const GridItem = ({title, poster, year}) => {
   )
 }
 
-export default GridItem
+export default Movie

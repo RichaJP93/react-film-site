@@ -1,0 +1,15 @@
+.header{
+  margin: auto;
+  text-align: center;
+}
+
+.movie-list{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+img {
+  height: 300px;
+}

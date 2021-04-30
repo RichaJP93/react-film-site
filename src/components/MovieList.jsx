@@ -1,8 +1,22 @@
-import React from 'react'
-import Movie from './Movie'
+import React, {useState, useEffect}from 'react';
+import axios from 'axios';
+import Movie from './Movie';
 
 
-const MovieList = ({title, movies}) => {
+const MovieList = ({title}) => {
+
+  const [movies, setMovies] = useState([]);
+
+  const url = 'http://www.omdbapi.com/?s=' + title + '&apikey=976c40fe';
+
+  useEffect(()=> {
+    axios.get(url)
+      .then(res => {
+        const movies = res.data;        
+        setMovies(movies.Search)
+      })    
+  }, [])
+
   return (
     <div>
       <h1>{title}</h1>

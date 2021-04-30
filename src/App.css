@@ -1,6 +1,22 @@
+.header-container{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: black;
+}
+
+
 .header{
   margin: auto;
   text-align: center;
+  font-family: Arial, Arial, sans-serif;
+  color: red;
+}
+
+body {
+  background: linear-gradient(180deg, orange, red);
+  height: 100%;
 }
 
 .movie-list{
@@ -8,8 +24,25 @@
   flex-direction: row;
   overflow-x: auto;
   flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+  background: transparent;
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 15px;
+  width: 99%;
+  color: black;
+  text-align: center;
+  font-family: Arial, Arial, sans-serif;
+}
+
+.movie-list::-webkit-scrollbar {
+  display: none;
 }
 
 img {
-  height: 300px;
+  max-height: 300px;
+  width: 200px;
+  margin: 0px 15px 0px 15px;
 }

@@ -6,7 +6,6 @@ const Movie = ({title, poster, year}) => {
       <p>{title}</p>
       <img src={poster} alt={title}/>
       <p>{year}</p>
-      <hr />
     </div>
   )
 }

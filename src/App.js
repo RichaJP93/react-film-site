@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios';
+import React from 'react'
 import Carousel from './components/Carousel';
 import MovieList from './components/MovieList';
 import Header from './components/Header';
@@ -7,17 +6,6 @@ import './App.css';
 
 
 const App = () => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(()=> {
-    axios.get(`http://www.omdbapi.com/?s=star_wars&apikey=976c40fe`)
-      .then(res => {
-        const movies = res.data;        
-        setMovies(movies.Search)
-      })    
-  }, [])
-
-  console.log(movies)
   return (
     <div className="App">
       <div className="header-container">
@@ -27,11 +15,14 @@ const App = () => {
         <Carousel />
       </div>
       <div className="film-grid-container" >
-        <MovieList title='Star Wars' movies={movies}/>
+        <MovieList title='Star Wars' />
       </div>
-      {/* <div className="film-grid-container" >
-        <Grid />
-      </div> */}
+      <div className="film-grid-container" >
+        <MovieList title='Alien'/>
+      </div>
+      <div className="film-grid-container" >
+        <MovieList title='Jurassic Park'/>
+      </div>
     </div>
   );
 }

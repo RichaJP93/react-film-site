@@ -21,7 +21,7 @@ const App = () => {
         <MovieList title='Alien'/>
       </div>
       <div className="film-grid-container" >
-        <MovieList title='Jurassic Park'/>
+        <MovieList title='Harry Potter'/>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ const MovieList = ({title}) => {
       <h1>{title}</h1>
       <div className='movie-list'>
         {movies.map((movie) => {
-          return <Movie key={movie.imdbID} title={movie.Title} poster={movie.Poster} year={movie.Year}/>
+          return <Movie key={movie.imdbID} title={movie.Title} poster={movie.Poster} year={movie.Year} type={movie.Type}/>
         })}    
       </div>
     </div>

@@ -16,7 +16,7 @@ const MovieDetails = ({movie, setSelectedMovie}) => {
   }, [movie])
 
   return (
-    <div>
+    <div className="movie-details-container">
       <h1>{movieInfo.Title}</h1>
       <img src={movieInfo.Poster} alt={movieInfo.Title}/>
       <h3>Details</h3>

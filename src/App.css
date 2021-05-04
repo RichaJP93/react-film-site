@@ -34,7 +34,6 @@ body {
   overflow-x: auto;
   flex-wrap: nowrap;
   -ms-overflow-style: none;
-  scrollbar-width: none; 
   background: rgba(0, 0, 0, .4);  
   border-color: black;
   border-width: 5px;
@@ -47,7 +46,22 @@ body {
 }
 
 .movie-list::-webkit-scrollbar {
-  display: none;
+  height: 15px;
+  background-color: #000;
+}
+
+.movie-list::-webkit-scrollbar-track {
+  background: rgba(39, 39, 39, 0.4); 
+  border-radius: 10px;
+}
+
+.movie-list::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+.movie-list::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 img {

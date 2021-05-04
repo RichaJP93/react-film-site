@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {Button} from '@material-ui/core'
 
-const MovieDetails = ({movie}) => {
+const MovieDetails = ({movie, setSelectedMovie}) => {
 
   const [movieInfo, setMovieInfo] = useState({})
 
@@ -29,6 +30,9 @@ const MovieDetails = ({movie}) => {
       </ul>
       <h3>Summary</h3>
       <p>{movieInfo.Plot}</p>
+      <Button variant="contained" color="Primary" onClick={()=> {setSelectedMovie('')}} >
+        Back
+      </Button>
     </div>
   )
 }

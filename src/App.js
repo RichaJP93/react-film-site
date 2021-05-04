@@ -15,24 +15,25 @@ const App = () => {
     <div className="App">
       <div className="header-container">
         <Header />
-      </div>
-      <div className="carousel-container" >
-        <Carousel />
-      </div>
-      <div className="film-grid-container" >
-        <MovieList title='Star Wars' setSelectedMovie={setSelectedMovie}/>
-      </div>
-      <div className="film-grid-container" >
-        <MovieList title='Alien' setSelectedMovie={setSelectedMovie}/>
-      </div>
-      <div className="film-grid-container" >
-        <MovieList title='Harry Potter' setSelectedMovie={setSelectedMovie}/>
-      </div>
+      </div>    
       <div className="movie-details">
         {selectedMovie !== '' ? 
-          <MovieDetails movie={selectedMovie}/>
+          <MovieDetails movie={selectedMovie} setSelectedMovie={setSelectedMovie}/>
         :
-         <></>
+        <div className="main-content">
+          <div className="carousel-container" >
+            <Carousel />
+          </div>
+          <div className="film-grid-container" >
+            <MovieList title='Star Wars' setSelectedMovie={setSelectedMovie}/>
+          </div>
+          <div className="film-grid-container" >
+            <MovieList title='Alien' setSelectedMovie={setSelectedMovie}/>
+          </div>
+          <div className="film-grid-container" >
+            <MovieList title='Harry Potter' setSelectedMovie={setSelectedMovie}/>
+          </div>
+        </div>  
         }
       </div>
       <div className="footer-container">

@@ -4,6 +4,10 @@ body {
   font-family: Arial, Arial, sans-serif;
 }
 
+.App {
+  height:100%;
+}
+
 .header-container{
   position: absolute;
   top: 0%;
@@ -18,14 +22,37 @@ body {
   color: red;
 }
 
-.footer-container {
-  position: absolute;
-  left: 0px;
-  bottom: 100%px;
-  width: 100%;
-  background-color: black;
-  color: red;
-  text-align: center;
+.carousel-container {
+  position: relative;
+  top: 100px;
+  margin-bottom: 130px;
+}
+
+.carousel-slideshow-container {
+  max-width: 90%;
+  position: relative;
+  /* top: 100px; */
+  margin: auto;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, .4);
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 15px  
+}
+
+.carousel-image {
+  height: 300px;
+  width: 200px;
+  padding-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.film-grid-container {
+  position: relative;
+  /* top: 50px */
 }
 
 .movie-list{
@@ -75,3 +102,18 @@ img:hover {
   transform: scale(1.1);
 }
 
+.footer-container {
+  position:absolute;
+  /* bottom: 0; */
+  /* margin-top: 30px; */
+  left:0px;
+  width: 100%;
+  height: 2.5rem;
+  background-color: black;
+}
+
+.footer {
+  margin: auto;
+  text-align: center;  
+  color: red;
+}

@@ -37,7 +37,7 @@ const MovieDetails = ({movie, setSelectedMovie}) => {
         <h3>Summary</h3>
         <p>{movieInfo.Plot}</p>
       </div>          
-      <Button className="movie-details-button" variant="contained" color="Primary" onClick={()=> {setSelectedMovie('')}} >
+      <Button className="movie-details-button" variant="contained" color="primary" onClick={()=> {setSelectedMovie('')}} >
         Back
       </Button>
     </div>

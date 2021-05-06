@@ -10,11 +10,11 @@ import './App.css';
 const App = () => {
 
   const [selectedMovie, setSelectedMovie] = useState('');
-
+  
   return (
     <div className="App">
       <div className="header-container">
-        <Header />
+        <Header setSelectedMovie={setSelectedMovie}/>
       </div>    
       <div className="movie-details">
         {selectedMovie !== '' ? 
